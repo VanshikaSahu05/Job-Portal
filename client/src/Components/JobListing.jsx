@@ -121,7 +121,7 @@ const JobListing = () => {
           {filteredJobs
             .slice((currentPage - 1) * 6, currentPage * 6)
             .map((job, index) => (
-              <JobCard key={job.id || index} job={job} />
+              <JobCard key={job._id || index} job={job} />
             ))}
         </div>
 
