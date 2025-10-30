@@ -8,7 +8,7 @@ const JobCard = ({job}) => {
 
 
   return (
-    <div className="border p-6 shadow rounded">
+    <div className="border border-gray-300 p-6 shadow rounded">
         <div className="flex justify-between items-center">
             <img className="h-8" src={assets.company_icon} alt="" />
         </div>

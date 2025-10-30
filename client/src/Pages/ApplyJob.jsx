@@ -6,6 +6,8 @@ import NavBar from "../Components/NavBar"
 import { assets } from "../assets/assets";
 import kConvert from "k-convert"
 import moment from "moment"
+import JobCard from "../Components/JobCard"
+import Footer from "../Components/Footer"
 
 const ApplyJob = () => {
 
@@ -78,10 +80,22 @@ const ApplyJob = () => {
               Apply Now
             </button>
           </div>
+{/* Right Section More Jobs */}
+          <div className="w-full lg:w-1/3 mt-8 lg:mt-0 lg:ml-8 space-y-5">
+            <h2>More JObs From {jobData.companyId.name}</h2>
+            {
+              jobs.filter(job => job._id !==jobData._id && job.companyId._id === jobData.companyId._id)
+              .filter( job => true).slice(0,4)
+              .map((job,index)=> <JobCard key={index} job={job}  />)
+            }
+          </div>
+
         </div>
 
       </div>
     </div>
+
+    <Footer />
     </>
   ):(
     <Loading />
