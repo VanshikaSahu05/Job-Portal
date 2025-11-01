@@ -41,7 +41,7 @@ const Recruiter = () => {
             <div className="flex items-center gap-4 my-10">
               <label htmlFor="image">
                 <img
-                  className="w-16 rounded-full"
+                  className="w-16 h-16 rounded-full"
                   src={image ? URL.createObjectURL(image) : assets.upload_area}
                   alt=""
                 />
@@ -53,7 +53,7 @@ const Recruiter = () => {
                 />
               </label>
               <p>
-                Upload Company <br /> logo{" "}
+                Upload Company <br /> Logo{" "}
               </p>
             </div>
           </>
