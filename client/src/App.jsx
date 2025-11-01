@@ -7,8 +7,11 @@ import { useContext } from 'react'
 import { AppContext } from './Context/AppContext'
 import Dashboard from './Pages/Dashboard'
 import AddJob from './Pages/AddJob'
-import ManageJobs from './Pages/Managejobs'
+
 import ViewApplication from './Pages/ViewApplication'
+import ManageJob from './Pages/ManageJob'
+
+
 
 
 
@@ -26,7 +29,7 @@ function App() {
         <Route path='/applications' element={<Applications />} />
         <Route path='/dashboard' element={<Dashboard />}>
         <Route path='add-job' element={<AddJob/>}/>
-        <Route path='manage-jobs' element={<ManageJobs/>}/>
+        <Route path='manage-jobs' element={<ManageJob/>}/>
         <Route path='view-applications' element={<ViewApplication/>}/>
         </Route>
         
