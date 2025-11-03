@@ -10,7 +10,7 @@ import AddJob from './Pages/AddJob'
 
 import ViewApplication from './Pages/ViewApplication'
 import ManageJob from './Pages/ManageJob'
-
+import 'quill/dist/quill.snow.css'
 
 
 
