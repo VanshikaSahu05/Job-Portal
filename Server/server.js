@@ -3,6 +3,7 @@ import 'dotenv/config'
 import express from 'express'
 import cors from 'cors'
 import mongoose from 'mongoose';
+import * as Sentry from "@sentry/node"
 
 // import connectDB from './config/db.js';
 
@@ -32,9 +33,14 @@ app.use(express.json())
 
 // Routes
 app.get('/',(req,res)=>res.send("API working"))
+app.get("/debug-sentry", function mainHandler(req, res) {
+  throw new Error("My first Sentry error!");
+});
 
 // port 
 const PORT = process.env.PORT || 5000;
+Sentry.setupExpressErrorHandler(app);
+
 app.listen(PORT,() => {
     console.log('Server is running on port:' + PORT);
 })
